@@ -3,13 +3,13 @@ import { Product } from "@/types/product";
 
 // Import all language versions
 import enProducts from "@/json/products/en.json";
-import geProducts from "@/json/products/ge.json";
+import kaProducts from "@/json/products/ka.json";
 import ruProducts from "@/json/products/ru.json";
 
 // Create a mapping of locale to products with proper type assertion
 const productsMap: Record<string, Product[]> = {
   en: enProducts as Product[],
-  ge: geProducts as Product[],
+  ka: kaProducts as Product[],
   ru: ruProducts as Product[],
 };
 

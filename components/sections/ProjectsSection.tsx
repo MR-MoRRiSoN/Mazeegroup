@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { ScrollableCardsSection } from "./ScrollableCardsSectionProps";
 import { ProjectCard } from "@/components/features/projects/ProjectCard";
 import { Project } from "@/types/project";

@@ -375,5 +375,15 @@
     "resultsAchieved": "Results Achieved",
     "getSimilarQuote": "Get Similar Project Quote",
     "contactTeam": "Contact Our Team"
+  },
+  "NotFound": {
+    "title": "404 - Page Not Found",
+    "message": "The page you're looking for doesn't exist.",
+    "backHome": "Back to Home"
+  },
+  "Error": {
+    "title": "Something went wrong!",
+    "message": "An unexpected error occurred.",
+    "retry": "Try again"
   }
 }

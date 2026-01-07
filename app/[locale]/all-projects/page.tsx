@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { ArrowLeft } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { Navigation } from "@/components/layout/Navigation";

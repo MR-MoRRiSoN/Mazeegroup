@@ -3,13 +3,13 @@ import { Project } from "@/types/project";
 
 // Import all language versions
 import enProjects from "@/json/made_projects/en.json";
-import geProjects from "@/json/made_projects/ge.json";
+import kaProjects from "@/json/made_projects/ka.json";
 import ruProjects from "@/json/made_projects/ru.json";
 
 // Create a mapping of locale to projects
 const projectsMap: Record<string, Project[]> = {
   en: enProjects as Project[],
-  ge: geProjects as Project[],
+  ka: kaProjects as Project[],
   ru: ruProjects as Project[],
 };
 

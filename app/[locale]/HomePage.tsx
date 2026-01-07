@@ -1,6 +1,6 @@
 "use client";
 import React, { useMemo, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useLocale } from "next-intl";
 import { Navigation } from "@/components/layout/Navigation";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";

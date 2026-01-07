@@ -24,7 +24,16 @@
       "Bash(nul)",
       "Bash(findstr:*)",
       "Bash(mkdir:*)",
-      "Bash(copy \"C:\\Users\\morrison\\Downloads\\PROJ_IMG\\maze video.mov\" \"D:\\Github\\frontend_maze-group\\public\\assets\\maze-video.mov\")"
+      "Bash(copy \"C:\\Users\\morrison\\Downloads\\PROJ_IMG\\maze video.mov\" \"D:\\Github\\frontend_maze-group\\public\\assets\\maze-video.mov\")",
+      "Bash(git -C \"D:\\\\Github\\\\frontend_maze-group\" log --oneline -10)",
+      "Bash(test:*)",
+      "Bash(move \"json\\\\products\\\\ge.json\" \"json\\\\products\\\\ka.json\")",
+      "Bash(move \"json\\\\made_projects\\\\ge.json\" \"json\\\\made_projects\\\\ka.json\")",
+      "Bash(move \"messages\\\\ge.json\" \"messages\\\\ka.json\")",
+      "Bash(git mv:*)",
+      "Bash(xargs rm -rf)",
+      "Bash(npm run dev:*)",
+      "Bash(git diff:*)"
     ],
     "deny": [],
     "ask": []

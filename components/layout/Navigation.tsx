@@ -1,12 +1,12 @@
 // components/layout/Navigation.tsx
 "use client";
 
-import React, { useState, useTransition, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { useRouter, usePathname } from "next/navigation";
 import { Svgs } from "../constants";
 import { Locale } from "@/i18n/config";
-import { setUserLocale } from "@/services/locale";
 import { useLocale, useTranslations } from "next-intl";
 import { US, GE, RU } from "country-flag-icons/react/3x2";
 
@@ -18,7 +18,7 @@ interface Language {
 
 const languages: Language[] = [
   { code: "en", name: "English", flag: US },
-  { code: "ge", name: "ქართული", flag: GE },
+  { code: "ka", name: "ქართული", flag: GE },
   { code: "ru", name: "Русский", flag: RU },
 ];
 
@@ -49,8 +49,9 @@ const useClickOutside = (handler: () => void) => {
 export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
-  const [isPending, startTransition] = useTransition();
 
+  const router = useRouter();
+  const pathname = usePathname();
   const currentLocale = useLocale() as Locale;
   const t = useTranslations("navigation");
 
@@ -71,9 +72,12 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
     languages.find((lang) => lang.code === currentLocale) || languages[0];
 
   const handleLanguageChange = (languageCode: Locale) => {
-    startTransition(() => {
-      setUserLocale(languageCode);
-    });
+    // Remove current locale from pathname and add new locale
+    const segments = pathname.split('/').filter(Boolean);
+    // First segment is the locale, replace it
+    segments[0] = languageCode;
+    const newPath = `/${segments.join('/')}`;
+    router.push(newPath);
     setLanguageMenuOpen(false);
   };
 
@@ -111,11 +115,8 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
             <div className="relative hidden lg:block" ref={languageMenuRef}>
               <button
                 onClick={() => setLanguageMenuOpen(!languageMenuOpen)}
-                className={`flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-[#032685] hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium ${
-                  isPending ? "opacity-50 cursor-not-allowed" : ""
-                }`}
+                className="flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-[#032685] hover:bg-gray-50 rounded-md transition-colors duration-200 font-medium"
                 aria-label={t("selectLanguage")}
-                disabled={isPending}
               >
                 <currentLang.flag className="w-5 h-3 rounded-sm shadow-sm" />
                 <span className="text-sm">{currentLang.name}</span>
@@ -140,7 +141,6 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
                             ? "bg-blue-50 text-[#032685]"
                             : "text-gray-700"
                         }`}
-                        disabled={isPending}
                       >
                         <FlagComponent className="w-6 h-4 rounded-sm shadow-sm" />
                         <span className="text-sm font-medium">
@@ -212,7 +212,6 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
                         ? "bg-blue-50 text-[#032685]"
                         : "text-gray-700"
                     }`}
-                    disabled={isPending}
                   >
                     <FlagComponent className="w-6 h-4 rounded-sm shadow-sm" />
                     <span className="text-sm font-medium">{language.name}</span>

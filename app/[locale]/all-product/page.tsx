@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { Search, Filter, ArrowLeft, SlidersHorizontal } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import { Navigation } from "@/components/layout/Navigation";
