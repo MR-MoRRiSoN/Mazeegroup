@@ -1,0 +1,42 @@
+[33mc9ac1eb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m up4
+[33m0fc3621[m up3
+[33m70aa04b[m seo update
+[33md064a4c[m update_seo
+[33m86e2e20[m fix_nav_logo
+[33mcf64e64[m remove keywords
+[33mda84e68[m update_seo
+[33meceefbd[m Fix React Server Components CVE vulnerabilities
+[33mc9403ab[m update_number
+[33m2c39ffe[m update_catalog
+[33m441bb1d[m optimise_video
+[33m0860b55[m optimise for mobile
+[33mc95c24a[m add_video_on_welcome
+[33m512618b[m perfomance_update
+[33mb6d0390[m update_show_image_on_service
+[33m6531756[m addNewLogos
+[33md2fc55d[m update_logo_view
+[33m4dfc832[m update_for_mobile
+[33m27a9682[m update_logo_structure
+[33mec549a5[m remove_logs_from_catalog
+[33m935f483[m update_catalog_mix
+[33ma0ef19f[m update_catalog_and_page _structure
+[33mb12ae99[m fix_bugs
+[33m4e2cf0a[m update_projects
+[33mf256a2b[m image_update_2
+[33ma362105[m uppload_proj_images
+[33mfee13ad[m update_category_style
+[33mdce52d1[m fix_stuppid_error
+[33mcda4845[m update_content
+[33mbbe2b33[m fix-bugs
+[33m0e95f5b[m update icon
+[33m66fc6fa[m .
+[33m7cae9d5[m update_translation
+[33m24f0aa4[m text_updates
+[33m5d37b52[m Update ge.json
+[33m0bb95f6[m Update ge.json
+[33m1245a02[m Update ru.json
+[33mb3b2293[m update navbar functionality
+[33mca6d53a[m fix_build_errors
+[33m01acc13[m Update page.tsx
+[33m1c026a5[m publish_project
+[33m9dd487f[m Initial commit
