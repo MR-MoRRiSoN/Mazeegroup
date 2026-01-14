@@ -26,19 +26,18 @@ export async function generateMetadata({ params }: ProductDetailProps): Promise<
   return {
     title: `${product.name} | Hotel Equipment Supplier Georgia | Maze Group`,
     description: product.description?.slice(0, 160) || `${product.name} - Professional hotel equipment supplier in Georgia. ${product.category}. Contact for pricing and installation.`,
-    keywords: [
-      product.name,
-      `${product.name} Georgia`,
-      `${product.name} Tbilisi`,
-      `${product.category} hotel equipment`,
-      `${product.category} supplier Georgia`,
-      'hotel equipment Georgia',
-      'hospitality equipment Tbilisi',
-    ],
     openGraph: {
       title: `${product.name} | Maze Group`,
       description: product.description?.slice(0, 160) || `${product.name} for hotels in Georgia`,
       images: product.images?.slice(0, 1),
+    },
+    alternates: {
+      canonical: `https://maze-group.com/${locale}/catalog/${id}`,
+      languages: {
+        en: `https://maze-group.com/en/catalog/${id}`,
+        ru: `https://maze-group.com/ru/catalog/${id}`,
+        ka: `https://maze-group.com/ka/catalog/${id}`,
+      },
     },
   };
 }

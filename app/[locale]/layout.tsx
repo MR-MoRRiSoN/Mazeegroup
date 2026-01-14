@@ -24,30 +24,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       "Maze Group - Hotel Equipment & IT Solutions Supplier | Georgia, Azerbaijan, Armenia, CIS",
     description:
       "Leading hotel equipment supplier in Georgia, Azerbaijan & CIS. LG & Samsung TVs, LED screens, digital signage, IT solutions. 24/7 service in Tbilisi.",
-    keywords: [
-      // Primary - Broad Hotel Equipment (Top Priority)
-      "hotel equipment supplier Georgia",
-      "hotel equipment supplier Tbilisi",
-      "hotel room equipment Georgia",
-      "hospitality equipment supplier Caucasus",
-      "hotel OS&E supplier Georgia",
-
-      // Secondary - Key Product Categories (High Value)
-      "LG hotel TV supplier Georgia",
-      "Samsung hotel TV supplier Georgia",
-      "digital signage screens for hotels",
-      "hotel minibar supplier Georgia",
-      "hotel carpet supplier Georgia",
-
-      // Tertiary - Regional Expansion (Medium Value)
-      "hotel equipment supplier Azerbaijan",
-      "hotel equipment supplier Armenia",
-      "hotel equipment supplier CIS region",
-
-      // Long-tail - Specific Solutions (Conversion Keywords)
-      "hotel IT infrastructure integrator Georgia",
-      "LED video wall supplier Georgia",
-    ],
     authors: [{ name: "Maze Group" }],
     creator: "Maze Group",
     publisher: "Maze Group",
@@ -62,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         "Professional hotel equipment supplier in Georgia, Azerbaijan, Armenia and CIS. LG & Samsung TVs, minibars, safes, LED screens, IT infrastructure.",
       url: `https://maze-group.com/${locale}`,
       siteName: "Maze Group",
-      locale: locale === 'ka' ? 'ka_GE' : `${locale}_${locale.toUpperCase()}`,
+      locale: locale === 'ka' ? 'ka_GE' : locale === 'ru' ? 'ru_RU' : 'en_US',
       type: "website",
     },
     robots: {
