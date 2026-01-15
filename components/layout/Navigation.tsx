@@ -4,7 +4,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import { Svgs } from "../constants";
 import { Locale } from "@/i18n/config";
 import { useLocale, useTranslations } from "next-intl";
@@ -72,12 +72,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onSectionClick }) => {
     languages.find((lang) => lang.code === currentLocale) || languages[0];
 
   const handleLanguageChange = (languageCode: Locale) => {
-    // Remove current locale from pathname and add new locale
-    const segments = pathname.split('/').filter(Boolean);
-    // First segment is the locale, replace it
-    segments[0] = languageCode;
-    const newPath = `/${segments.join('/')}`;
-    router.push(newPath);
+    router.replace(pathname, { locale: languageCode });
     setLanguageMenuOpen(false);
   };
 
